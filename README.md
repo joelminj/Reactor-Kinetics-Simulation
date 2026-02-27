@@ -1,6 +1,9 @@
 # Reactor Kinetics Simulation
 RP Activity 5: MATLAB-based transient simulator that solves the coupled non-linear ordinary differential equations for nuclear reactor point kinetics, lumped-parameter thermal-hydraulics, and a simplified 3-group decay heat model. The script models a dynamic reactor transient characterized by a continuous positive reactivity insertion (ramp) followed by an emergency reactor shutdown (SCRAM), actively accounting for Doppler and moderator temperature feedback mechanisms.
 
+<img width="1200" height="1000" alt="rp_5" src="https://github.com/user-attachments/assets/2805a251-dc26-4382-9e53-c86e85c34dfc" />
+
+
 ## Methodology
 
 The simulation employs a state-space formulation, tracking 12 state variables over time: normalized neutron flux (1), delayed neutron precursors (6), fuel temperature (1), coolant temperature (1), and decay heat groups (3). The system of ordinary differential equations (ODEs) is stiff due to the varying time scales of prompt neutrons and delayed precursors, thus it is solved using MATLAB's `ode15s` solver.
